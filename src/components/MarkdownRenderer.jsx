@@ -1,12 +1,11 @@
-import Markdown from "marked-react";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 const MarkdownRenderer = ({ rawMarkdown }) => {
     return (
         <div className="flex max-h-full">
             <div className="bg-neutral-800 w-full py-4 px-6 prose !prose-invert prose-neutral max-w-none" id="preview">
-                {/* <Markdown className="overflow-y-scroll">{ rawMarkdown }</Markdown> */}
-                <ReactMarkdown>{ rawMarkdown }</ReactMarkdown>
+                <ReactMarkdown remarkPlugins={[remarkGfm]} >{ rawMarkdown }</ReactMarkdown>
             </div>
         </div>
     );
