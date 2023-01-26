@@ -7,7 +7,7 @@ const App = () => {
     <div className="flex flex-col h-screen">
       <Header />
       <Content />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
