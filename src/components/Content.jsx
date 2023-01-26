@@ -18,14 +18,12 @@ const Content = () => {
         contentP2P.put({text: content});
     }, [content]);
 
-    
-
     return (
-        <div className="flex-grow bg-slate-300 flex flex-row">
-            <div className="bg-slate-300 w-1/2">
-                <MarkdownEditor content={content} setContent={setContent}/>
+        <div className="flex-grow flex lg:md:flex-row">
+            <div className="bg-neutral-800 w-1/2">
+                <MarkdownEditor content={content} setContent={setContent} />
             </div>
-            <div className="bg-slate-300 w-1/2">
+            <div className="bg-neutral-800 w-1/2">
                 <MarkdownRenderer rawMarkdown={content}/>
             </div>
         </div>
