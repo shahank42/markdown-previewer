@@ -3,7 +3,7 @@ import MarkdownEditor from "./MarkdownEditor";
 import MarkdownRenderer from "./MarkdownRenderer";
 import GUN from "gun";
 
-let contentP2P = GUN({peers: ['http://localhost:8080/gun']}).get("markdown-editor-shjfbshvb");
+let contentP2P = GUN({peers: ['http://localhost:8080/gun', 'https://HerokuCoordinator.karmakarmeghdip.repl.co']}).get("markdown-editor-shjfbshvb");
 
 const Content = () => {
     const [content, setContent] = useState("# Welcome to Markdown Editor");
